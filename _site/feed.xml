@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>zwm</title>
+    <description>凡是过去 皆为虚妄</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 23 Nov 2018 21:58:41 +0800</pubDate>
+    <lastBuildDate>Fri, 23 Nov 2018 21:58:41 +0800</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>创建macOS High Sierra安装盘</title>
+        <description>&lt;p&gt;今天晚上正好有时间，想把系统更新到macOS High Sierra，从商店下载完成后，习惯性的做一个安装盘备用，参考之前的命令行，修改运行:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; /Applications/Install&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;macOS&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;High&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Sierra.app/Contents/Resources/createinstallmedia &lt;span class=&quot;nt&quot;&gt;--volume&lt;/span&gt; /Volumes/I &lt;span class=&quot;nt&quot;&gt;--applicationpath&lt;/span&gt; /Applications/Install&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;macOS&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;High&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Sierra.app —nointeraction
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;提示：/Applications/Install macOS High Sierra.app does not appear to be a valid OS installer application.&lt;/p&gt;
+
+&lt;p&gt;Google了一下，说什么的都有；
+还是先参考知识库文章: &lt;a href=&quot;https://support.apple.com/en-us/HT201372&quot; target=&quot;_blank&quot;&gt;Create a bootable installer for macOS&lt;/a&gt;，发现High Sierra不用加–applicationpath参数，删除后运行如下命令：&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; /Applications/Install&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;macOS&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;High&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Sierra.app/Contents/Resources/createinstallmedia &lt;span class=&quot;nt&quot;&gt;--volume&lt;/span&gt; /Volumes/I —nointeraction
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;还是一样的问题&lt;/p&gt;
+
+&lt;p&gt;最后在交流区发现&lt;a href=&quot;https://origin-discussions2-us-dr.apple.com/thread/8085073&quot;&gt;Install macOS High Sierra.app does not appear to be a valid OS installer application&lt;/a&gt;，又是文件下载错误问题，需要保证安装文件大小为：&lt;strong&gt;&lt;em&gt;5.18G&lt;/em&gt;&lt;/strong&gt;，重复多次下载后终于下到该大小的安装包，运行命令，问题解决！&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果之前没做个安装盘，请遵循以下步骤：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;ol&gt;
+    &lt;li&gt;从商店下载&lt;/li&gt;
+    &lt;li&gt;如果安装器运行，记得退出安装&lt;/li&gt;
+    &lt;li&gt;插入U盘或者移动硬盘(请记得分区)，安装分区需要至少有12G空间，我一般预留16G，使用磁盘工具格式化为:MacOS扩展(日志式)格式&lt;/li&gt;
+    &lt;li&gt;运行上面的命令(上面两个命令都可以，需要注意将–volume后的参数改为你自己在3.中格式化的盘符名，指定错误毁数据，谨慎操作)&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;/2017/09/create_a_bootable_installer_for_macos/&quot;&gt;原始链接&lt;/a&gt; 版权声明：自由转载-非商用-非衍生-保持署名 | &lt;a href=&quot;http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh&quot;&gt;Creative Commons BY-NC-ND 4.0&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Fri, 29 Sep 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/09/create_a_bootable_installer_for_macos/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/09/create_a_bootable_installer_for_macos/</guid>
+        
+        <category>macOS</category>
+        
+        <category>教程</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>New Surface Visualization</title>
+        <description>
+</description>
+        <pubDate>Mon, 02 May 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/05/New-Surface-Visualization/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/05/New-Surface-Visualization/</guid>
+        
+        <category>plysurface</category>
+        
+        <category>visualization</category>
+        
+        <category>template</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
