@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 虚拟机网卡原理
-date: 2019-11-21
+title: zookeeper
+date: 2020-01-04
 tags: [zookeeper,分布式,事务,paxos]
 ---
 
